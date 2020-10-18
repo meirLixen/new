@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+        <link rel="stylesheet" href="/landingPage.css">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body id="landinr_page_view ">
+
+    <!-- <div id="view" class="row col-12 justify-content-center mx-auto"> -->
+       <div class="row ">
+           <div class="col-md-8 mx-auto">
+        <!-- <div id="wrap-landingPafe" class=""> -->
+            <!-- <div id="button-preview-screen" class="d-flex justify-content-center ">
+                <button class="btn" onclick="previewScreens('phone')"><span class="material-icons">
+                        stay_primary_portrait
+                    </span></button>
+                <button class="btn" onclick="previewScreens('tablet')"><span class="material-icons">
+                        <span class="material-icons">
+                            tablet_android
+                        </span></button>
+                <button class="btn" onclick="previewScreens('desktop')"><span class="material-icons">
+                        <span class="material-icons">
+                            desktop_windows
+                        </span>
+                </button>
+            </div> -->
+            <div class="p-5 d-flex align-items-center m-auto " id="landingPage_view">
+                <div class="row mx-auto">
+                    <div class="col-md-7  " id="lpElements_view">
+                        <!-- <div></div> -->
+                        <!-- <div id="title_view" class="divElements_view mb-2 p-2 d-flex"> -->
+                            <div  id="h1_view" class="col-md-10 mt-auto h1 mt-4 mb-4">Type Your Title</div>
+                        <!-- </div>
+                         -->
+                            <!-- <div id="description_view" class="divElements_view mb-2 p-2 "> -->
+                            <div   class="col-md-10  mt-4 mb-5" id="p_description_view"  >
+                            </div>
+                        <!-- </div> -->
+
+                        <div id="image_view" class=" divElements_view ">
+                            <img id="imageLp_view" class=" col-md-10 mx-auto" alt="">
+
+                      
+
+                    </div>
+
+
+                    </div>
+          
+                <!-- <div class="row"> -->
+                    <form class="col-md-5 p-4 mt-4 align-self-center" id="landingPageForm_view">
+
+                        <div class="form-group m-0" id="input1_view"> <label for="full_name2" class="m-0">
+                                <span id="span_one_view" class="asterisk"></span> <span type="text" class="labelForm"
+                                    id="full_name1_view"></span> </label>
+                            <input type="text" id="full_name2ֹ_view" class="form-control" value="">
+                            <p id="p1" class="m-0"></p>
+                        </div>
+                        <div class="form-group m-0" id="input2_view"> <label for="email" class="m-0">
+                                <span id="span_two_view" class="asterisk"></span> <span type="text" class="labelForm"
+                                    id="email1_view" ‏></span>
+                            </label>
+                            <input type="email" class="form-control" id="email" value="">
+                            <p id="p2" class="m-0"></p>
+                        </div>
+                        <div class="form-group m-0" id="input4_view"> <label for="phone" class="m-0">
+                                <span id="span_four_view" class="asterisk"></span> <span type="text" class="labelForm"
+                                    id="phone1_view" ‏></span>
+                            </label>
+                            <input type="phone" class="form-control" id="phone" value="">
+                            <p id="p3" class="m-0"></p>
+                        </div>
+
+                        <div class="form-group m-0" id="input3_view"> <label for="email" class="content m-0">
+                                <span id="span_three_view" class="asterisk"></span> <span type="text" class="labelForm"
+                                    id="content1_view"></span>
+                            </label>
+                            <textarea id="content" class="form-control" value=""></textarea>
+                            <p id="p4" class="m-0"></p>
+                        </div>
+                        <div class="form-group form-check">
+                            <input type="checkbox" class="form-check-input" id="" checked>
+                            <label class="form-check-label" for="">Recieve update & offers</label>
+                        </div>
+                        <button class="btn d-flex justify-content-center col-12" onclick="submitForm()" type="submit"
+                            id="submit_view">submit</button>
+                    </form>
+                </div>
+                </div>
+            </div>
+        <!-- </div>
+        <div></div> -->
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+    <script src="/landingPage.js"></script>
+    <script src="/frame.js"></script>
+    <script src="signature-pad-master/signature-pad-master/jquery.signaturepad.js"></script>
+    <!-- <script src="js.js"></script> -->
+    <script src="signature-pad-master/signature-pad-master/assets/json2.min.js"></script>
+</body>
+
+</html>

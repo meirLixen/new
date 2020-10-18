@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../../../LandingPage/views/landingPage.css">
+    </script>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link rel="stylesheet" type="text/css"
+        href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css" />
+    <link href="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/css/bootstrap4-toggle.min.css"
+        rel="stylesheet">
+        
+    <link
+        href="https://fonts.googleapis.com/css?family=Material+Icons|Material+Icons+Outlined|Material+Icons+Two+Tone|Material+Icons+Round|Material+Icons+Sharp"
+        rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/gh/gitbrent/bootstrap4-toggle@3.6.1/js/bootstrap4-toggle.min.js"></script>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/d3js/5.15.1/d3.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"
+        integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI"
+        crossorigin="anonymous"></script>
+
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="row">
+        <div id="wrap-landingPafe" class="col mt-3">
+            <!-- <div id="button-preview-screen" class="d-flex justify-content-center ">
+                <button class="btn" onclick="previewScreens('phone')"><span class="material-icons">
+                        stay_primary_portrait
+                    </span></button>
+                <button class="btn" onclick="previewScreens('tablet')"><span class="material-icons">
+                        <span class="material-icons">
+                            tablet_android
+                        </span></button>
+                <button class="btn" onclick="previewScreens('desktop')"><span class="material-icons">
+                        <span class="material-icons">
+                            desktop_windows
+                        </span>
+                </button>
+            </div> -->
+            <!-- <div class=""> -->
+            <div class="row col-12 p-5 d-flex align-items-center " id="landingPage">
+                <div class="col-md-6" id="lpElements">
+                    <div id="title" class="divElements border mb-2 p-2">
+                        <h1 id="h1" class="col-md-11">Type Your Title</h1>
+
+
+
+
+                    </div>
+                    <div id="description" class="divElements border mb-2 p-2">
+                        <p class="col-md-11" id="p_description">
+                            Bring to thr table win-win survival strategies to ensure
+                            procative dominstion. at the end of the day, going forword, a new normal</p>
+                    </div>
+
+
+                    <div id="image" class="divElements border">
+                        <label for="imgload" id="lableImg" class="col-12 d-flex p-0">
+                            <div id="up" class="flex-column d-flex justify-content-center align-items-center m-auto">
+                                <span class="material-icons">
+                                    cloud_upload
+                                </span>
+                                Click or drag image
+                            </div>
+                            <img src="#" class="imgshow d-none border" contenteditable="true" type="file">
+                        </label>
+                        <input type="file" id="imgload" class="loadImg d-none">
+                    </div>
+
+                </div>
+
+                <div class="col-md-5 mx-auto p-4 align-self-center" id="landingPageForm">
+
+                    <div id="first_input" class="form-group m-0"> <label for="full_name2" class="m-0">
+                            <span id="span_one" class="asterisk"></span> <input type="text" class="labelForm"
+                                id="full_name1" value="Full Name" oninput="Name(full_name1.value)"
+                                onkeypress="this.style.width = ((this.value.length + 1) * 8) + 'px';"> </label>
+                        <input type="text" id="full_name2" class="form-control" disabled>
+                    </div>
+
+                    <div id="second_input" class="form-group m-0"> <label for="email" class="m-0">
+                            <span id="span_two" class="asterisk"></span> <input type="text" class="labelForm"
+                                id="email1" value="Email" oninput="email(email1.value)" ‏>
+                        </label>
+                        <input type="email" class="form-control" id="email" disabled>
+                    </div>
+
+                    <div id="third_input" class="form-group m-0"> <label for="phone" class="m-0">
+                            <span id="span_four" class="asterisk"></span> <input type="text" class="labelForm"
+                                id="phone1" value="phone" oninput="ph(this.value)" ‏>
+                        </label>
+                        <input type="phone" class="form-control" id="phone" disabled>
+                    </div>
+
+
+                    <div id="fourth_input" class="form-group m-0"> <label for="content1" class="m-0">
+                            <span id="span_three" class="asterisk"></span> <input type="text" class="labelForm"
+                                id="content1" value="Content" oninput="change(content1.value)">
+                        </label>
+                        <textarea id="content" class="form-control" rows="2" disabled></textarea>
+                    </div>
+                    <div class="form-group form-check">
+                        <input type="checkbox" class="form-check-input" id="" checked>
+                        <label class="form-check-label" for="">Recieve update & offers</label>
+                    </div>
+                    <button class="btn d-flex justify-content-center col-12 " type="submit" id="submit">submit</button>
+                </div>
+
+            </div>
+            <!-- </div> -->
+        </div>
+        <div id="wrap-configurator" class="col-md-3 col-xl-2  p-0">
+            <h4 class="heading_configurator mb-4 mx-3">Create New Page</h4>
+            <div id="accordion" class='mx-3'>
+                <div class="card button_configurator mb-2">
+                    <div class="card-header p-0 rounded" id="headingOne">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link " data-toggle="collapse" data-target="#collapseOne"
+                                aria-expanded="false" aria-controls="collapseOne">
+                                Page Setting </button>
+                        </h5>
+                    </div>
+                    <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                        <div class="card-body p-2">
+                            <button class="btn btn-sm btn-dir" id="ltr" onclick="lpDir('left')"><span
+                                    class="material-icons">
+                                    format_align_left
+                                </span></button>
+                            <button class="btn btn-sm btn-dir" id="rtl" onclick="lpDir('right')"><span
+                                    class="material-icons">
+                                    format_align_right
+                                </span></button>
+                            <div class="d-flex">
+                                <lable for="landingPageName">background color page</lable>
+                                <input type="color" class="ml-auto" id="page_color" name="favcolor" value=""
+                                    oninput="page_color(this.value)">
+                            </div>
+                            <div>
+                                <lable for="landingPageName">Name of landing page</lable>
+                                <input type="text" id="landingPageName" value="" class="form-control"
+                                    oninput="landingPageName(this.value)">
+                            </div>
+
+                            <div class="form-group ">
+                                <div class="d-flex justify-content-between">
+
+                                    <h6>Title</h6>
+                                    <lable for="heder"></lable>
+
+
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="tb_title" checked
+                                            oninput="check_tb_title(this.checked)">
+                                        <label class="custom-control-label" for="tb_title"></label>
+                                    </div>
+
+                                </div>
+                                <input type="text" id="heder" value="" class="form-control"
+                                    oninput="title_page(this.value)">
+                            </div>
+
+
+                            <div class="d-flex">
+                                <lable for="title_color">Title Styel</lable>
+                                <input type="color" class="ml-auto" id="title_color" name="favcolor" value=""
+                                    oninput="title_color(this.value)">
+                            </div>
+                            <div class="d-flex justify-content-between">
+
+
+                                <h6>Content</h6>
+
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="tb_Content" checked
+                                        oninput="check_content(this.checked)">
+                                    <label class="custom-control-label" for="tb_Content"></label>
+                                </div>
+                            </div>
+
+                            <textarea id="content" class="form-control" oninput="content(this.value)"></textarea>
+                            <div class="d-flex">
+                                <lable for="content_color">Content Styel</lable>
+                                <input type="color" class="ml-auto" id="content_color" name="favcolor" value=""
+                                    oninput="content_color(this.value)">
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="card button_configurator mb-2"> 
+                    <div class="card-header p-0 rounded" id="headingTwo">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link" data-toggle="collapse" data-target="#collapseTwo"
+                                aria-expanded="false" aria-controls="collapseTwo">
+                                Contact Details </button>
+                        </h5>
+                    </div> -->
+                <!-- <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                        <div class="card-body p-2"> 
+
+                   
+
+
+
+                            
+                       </div>
+                    </div> 
+              </div> -->
+                <div class="card button_configurator mb-2">
+                    <div class="card-header p-0 rounded" id="headingThree">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree"
+                                aria-expanded="false" aria-controls="collapseThree">
+                                Form Details </button>
+                        </h5>
+                    </div>
+                    <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                        <div class="card-body p-2">
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <lable for="input1">Full Name</lable>
+
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="tb_full_name" checked
+                                            oninput="check_full_name(this.checked)">
+                                        <label class="custom-control-label" for="tb_full_name"></label>
+                                    </div>
+                                </div>
+
+                                <input type="text" id="input1" value="" class="form-control"
+                                    oninput="input1(this.value)">
+                            </div>
+
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" name="checkbox1" id="checkbox1"
+                                    oninput="checkbox1(this.checked)">
+                                <label class="form-check-label" for="">Required</label>
+                            </div>
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <lable for="input2">Email</lable>
+
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="tb_email" checked
+                                            oninput="check_email(this.checked)">
+                                        <label class="custom-control-label" for="tb_email" disabled></label>
+                                    </div>
+                                </div>
+
+                                <input type="text" id="input2" value="" class="form-control"
+                                    oninput="input2(this.value)">
+                            </div>
+
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" name="checkbox2" id="checkbox2"
+                                    oninput="checkbox2(this.checked)">
+                                <label class="form-check-label" for="">Required</label>
+                            </div>
+
+
+
+
+                            <div class="d-flex justify-content-between">
+                                <lable for="input4">Phone</lable>
+
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="tb_phone" checked
+                                        oninput="check_phone(this.checked)">
+                                    <label class="custom-control-label" for="tb_phone"></label>
+                                </div>
+                            </div>
+
+                            <input type="text" id="input4" value="" class="form-control" oninput="input4(this.value)">
+
+
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" name="checkbox1" id="checkbox4"
+                                    oninput="checkbox4(this.checked)">
+                                <label class="form-check-label" for="">Required</label>
+                            </div>
+
+
+
+
+                            <div class="form-group">
+                                <div class="d-flex justify-content-between">
+                                    <lable for="input3">message</lable>
+
+                                    <div class="custom-control custom-switch">
+                                        <input type="checkbox" class="custom-control-input" id="tb_message" checked
+                                            oninput="check_message(this.checked)">
+                                        <label class="custom-control-label" for="tb_message"></label>
+                                    </div>
+                                </div>
+
+                                <input type="text" id="input3" value="" class="form-control"
+                                    oninput="input3(this.value)">
+                            </div>
+
+                            <div class="form-group form-check">
+                                <input type="checkbox" class="form-check-input" name="checkbox3" id="checkbox3"
+                                    oninput="checkbox3(this.checked)">
+                                <label class="form-check-label" for="">Required</label>
+                            </div>
+
+
+
+                            <h5>Button</h5>
+
+                            <lable for="bg_color_button">background color</lable>
+                            <input type="color" class="ml-auto" id="bg_color_button" name="favcolor" value=""
+                                oninput="bg_color_button(this.value)"><br>
+
+
+                            <div class="form-group">
+                                <lable for="button_value">button_value</lable>
+                                <input type="text" id="button_value" value="" class="form-control"
+                                    oninput="button_value(this.value)">
+                            </div>
+
+
+                            <lable for="color_value_button">color value color</lable>
+                            <input type="color" class="ml-auto" id="color_value_button" name="favcolor" value=""
+                                oninput="color_value_button(this.value)"><br>
+                        </div>
+                    </div>
+                </div>
+                <div class="card button_configurator mb-2">
+                    <div class="card-header p-0 rounded" id="headingFour">
+                        <h5 class="mb-0">
+                            <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour"
+                                aria-expanded="false" aria-controls="collapseFour">
+                                Mangement Setting </button>
+                        </h5>
+                    </div>
+                    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                        <div class="card-body">
+
+                            <h6>Send Laeds To</h6>
+
+                            <div class="d-flex justify-content-between">
+                                <input type="email" id="to_whom" value="" class="form-control" oninput="">
+
+                                <button class="btn" id="plus" onclick="Add_an_address(to_whom.value)">
+                                    +
+
+                            </div>
+                            <div id="div_to_whom"> </div>
+                            <div id="readDirect">
+                                <h6>Read Direct</h6>
+                                <input type="text" id="readDirectInput" value="" class="form-control"
+                                    oninput="readD(this.value)">
+                            </div>
+                            <h6>link to your landing page:</h6>
+                            <span class="material-icons">
+                                link
+                                </span>
+                            <textarea id="link"></textarea>
+                          
+                        </div>
+                    </div>
+
+
+
+                </div>
+               
+
+
+
+                <div id="bottom-configurator" class="p-1 d-flex justify-content-center ">
+
+                    <!-- <div class="p-2 d-flex justify-content-center " id="update">
+                        <button class="btn px-5 py-0 viewFormButton " onclick="update_landingPage()">
+                            <span class="material-icons align-middle mr-2 ">play_arrow</span>update landingPage
+                        </button>
+                    </div> -->
+
+                    <div class="p-2 d-flex justify-content-center " id="button_save">
+                        <button class="btn px-5 py-0 viewFormButton " onclick="saveLandingPage()">
+                            <span class="material-icons align-middle mr-2 ">play_arrow</span>Save
+                        </button>
+                    </div>
+                    <div>
+
+
+                        <div class="p-2 d-flex justify-content-center " id="viewFormButton">
+                            <button class="btn px-5 py-0 viewFormButton  ">
+                                <a href="" onclick="viewLandingPage()" target="_blank"> <span
+                                        class="material-icons align-middle mr-2 ">play_arrow</span>publish</a>
+                            </button>
+                        </div>
+
+
+
+                        <!-- <button class="btn px-5 py-0 viewFormButton  ">
+                            <a href="./viewLandingPage.html" onclick="viewLandingPage()" target="_blank"> <span
+                                    class="material-icons align-middle mr-2 ">play_arrow</span>publish</a>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+
+        </div>
+=================
+
+    </div>
+    <form id="formLandingPage"></form>
+    <script src="../../../LandingPage/views/landingPage.js"></script>
+</body>
+
+</html>

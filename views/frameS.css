@@ -1,0 +1,487 @@
+.fram_shadow {
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.fram_col-10vh {
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    position: sticky;
+    top: 0px;
+    opacity: 1;
+    height: 50px;
+    z-index: 1;
+}
+
+.fram_text_header {
+    height: 24px;
+    text-align: center;
+    font: Regular 20px/24px Lato;
+    letter-spacing: 0.4px;
+    color: #384364;
+    text-transform: capitalize;
+    opacity: 0.78;
+}
+
+.fram_height1 {
+    height: 50px;
+}
+
+.fram_imgLeader {
+    width: 40px;
+    height: 40px;
+    border-radius: 19px;
+    opacity: 1;
+}
+
+.fram_background-color {
+    background: #E8EAEC 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 81%;
+    margin-left: 3%;
+    /* margin-top: 60px; */
+}
+
+.fram_widthImg {
+    width: 1rem;
+    cursor: pointer;
+    /* padding-bottom:1.5rem ; */
+   
+}
+
+.fram_containerImgSidebar {
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+    align-content: center;
+    /* background-color: #1041FB; */
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 0 !important;
+    margin-top: 10px !important;
+}
+
+.fram_contentSideBar {
+    /* margin: 15px; */
+    margin-top: 35px;
+    margin-left: 0px !important;
+}
+#down{
+   height: 10px; 
+   width: 10px;
+}
+
+.fram_divBlack {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    height: 50px;
+    background: #0A0E1B 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.fram_publish {
+    width: 100px;
+    height: 30px;
+    border-radius: 290px;
+    opacity: 1;
+}
+
+.fram_editor {
+    width: 8px;
+    height: 11px;
+    background: transparent url('image/multimedia.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.fram_editor1 {
+    width: 8px;
+    height: 11px;
+    background: transparent url('image/white-multimedia (1).svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.fram_p{
+    padding-bottom:1.5rem  
+}
+
+.fram_publishText {
+    vertical-align: top;
+    font: Medium 12px/16px SF Pro Display;
+    letter-spacing: 0px;
+    opacity: 1;
+}
+
+.fram_none {
+    display: none;
+}
+
+.fram_show {
+    display: "";
+}
+
+.fram_sidebarRight {
+    /* width: 190px; */
+    position: fixed;
+    height: 100vh;
+    top: 50px;
+    bottom: 0px;
+    right: 0px;
+    padding: 0px;
+    width: 16%;
+    opacity: 1;
+    border-radius: 65px 0px 0px 0px;
+    z-index: 2;
+}
+
+.fram_sidebarLeft {
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    width: 4%;
+    bottom: 0px;
+    left: 0px;
+    padding-top: 100px;
+    opacity: 1;
+    box-shadow: -1px 4px 6px #00000029
+}
+
+.fram_sidebarLeft1 {
+    position: fixed;
+    background-color: white;
+    height: 100vh;
+    padding-top: 100px;
+    left: 0px;
+    bottom: 0px;
+    /* background: white 0% 0% no-repeat padding-box; */
+    opacity: 1;
+}
+
+#sideLeftOpen {
+    width: 14%;
+}
+
+#sideLeftClose {
+    width: 3%;
+}
+.mApp span{
+    font-size: 3rem;
+}
+#fram_moreApp .btn {
+    color: #3A405E;
+}
+#fram_moreApp{
+    background-color: white;
+    position: absolute;
+    box-shadow: 0px 1px 6px #00000029;
+}
+
+.fram_content {
+    height: 85vh;
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.fram_textSideBar {
+    text-align: center;
+    display: inline-block;
+    vertical-align: bottom;
+    font: Medium 18px/24px Roboto;
+    letter-spacing: 0.32px;
+    color: #FFFFFF;
+    text-transform: capitalize;
+    opacity: 1;
+    font-size: 13px;
+}
+
+.fran_img_dark {
+    padding-right: 5px;
+    display: inline-block;
+    float: right;
+}
+
+.fram_thumbtack {
+    width: 20px;
+    height: 20px;
+}
+
+.fram_leader {
+    width: 30px;
+    height: 30px;
+    border-radius: 19px;
+    opacity: 1;
+}
+
+.fram_settingImg {
+    width: 22px;
+    height: 22px;
+    display: inline-block;
+    opacity: 1;
+}
+
+.fram_lightImg {
+    text-align: center;
+    font: Medium 18px/24px Roboto;
+    letter-spacing: 0.32px;
+    color: #0A0E1B;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.fram_color-gear {
+    color: white;
+    vertical-align: middle;
+}
+#section,body{
+    background-color: #E8EAEC;
+
+}
+#section{
+    height: 100%;
+}
+.fram_pSetting {
+    padding: 5px;
+    height: 35px;
+    margin: 10px;
+    border-radius: 8px;
+    opacity: 1;
+}
+
+.fram_BorderColor_purple {
+    border: 1px solid #979797;
+}
+
+.fram_BorderColor_black {
+    border: 1px solid #0A0E1B;
+}
+
+.fram_color_white {
+    color: #EBEAEA;
+}
+
+.fram_color_black {
+    color: #0A0E1B;
+}
+
+.fram_colorBackground-purple1 {
+    background: #A66DFF 0% 0% no-repeat padding-box;
+}
+
+.fram_colorBackground-purple {
+    background: #3A405E 0% 0% no-repeat padding-box;
+}
+
+.fram_colorBackground_white {
+    background: white 0% 0% no-repeat padding-box;
+}
+
+.fram_fontButton {
+    text-align: left;
+    font: Regular 16px/21px Roboto;
+    letter-spacing: 0.22px;
+    text-transform: capitalize;
+    opacity: 1;
+}
+
+.fram_editor {
+    width: 8px;
+    height: 11px;
+    background: transparent url('image/multimedia.svg') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+.fram_multi {
+    margin: 5px;
+    float: right;
+}
+
+.fram_plus {
+    color: #E8E7F2;
+    margin: 4px;
+}
+
+.fram_textInSideBarLeft {
+    /* width: 83px; */
+    text-align: left;
+    font: Bold 15px SF Pro Display;
+    letter-spacing: 0px;
+    color: #384364;
+    opacity: 1;
+    font-size: 15px;
+}
+
+#bg_funnel {
+    width: 30px;
+    height: 30px;
+    background: #F5F6FA 0% 0% no-repeat padding-box;
+    border-radius: 28px;
+    opacity: 1;
+    text-align: center;
+
+
+
+/* height:200% ;
+width: 90%; */
+    /* background-color: #f0f0f0; 
+     border-radius: 50%; */
+     
+   /* margin: 5px; */
+     /* position: relative;
+     background: #F5F6FA 0% 0% no-repeat padding-box;
+     border-radius:50%; */
+     
+     /* text-align: center; */
+  /* padding-top:20px !important ;  */
+  
+}
+
+
+.fram_colorRadius {
+    background: #A66DFF;
+    box-shadow: 0px 3px 6px #00000029;
+}
+
+.fram_colorWaite {
+    color: #E8EAEC;
+}
+.bgOnOpen{
+    background-color: white;
+    color:#A66DFF!important ;
+    border:1px solid #A66DFF ;
+    transform: rotate(45deg);}
+#fram_radius {
+    border-radius: 50px;
+    opacity: 1;
+    z-index: 5;
+    color: white;
+    font-size: 2rem;
+    height: 45px;
+    width: 45px;
+    text-align: center;
+}
+#group_radius{
+    bottom: 37px;
+    right: 17%;
+    position: fixed;
+    z-index: 5;
+}
+.fram_radius_x {
+   
+    width: 50px;
+    height: 50px;
+}
+
+.fram_widthImg1 {
+    width: 15px;
+}
+
+.fram_radiusMini {
+    width: 35px;
+    height: 35px;
+    background: #A66DFF ;
+    box-shadow: 0px 3px 6px #00000029;
+    border-radius: 50px;
+    opacity: 1;
+    margin: 2px;
+}
+#plus_div{
+    background: #bd9fee ;
+    width: 35px;
+    height: 35px;
+    border-radius: 50px;
+    color: white;
+    font-size: 1rem;
+    right: 282px;
+    position: fixed;
+    bottom: 20px;
+    box-shadow: 0px 3px 6px #00000029;
+
+
+}
+
+
+.fram_widthLabel {
+    display: inline-block;
+    width: 100px;
+    color: #384364;
+    font-size: 12px;
+    font-weight: bold;
+}
+/* 
+.fram_divLabel {
+    width: 200px;
+    position: absolute;
+    bottom: 90px;
+    right: 7px;
+} */
+
+.fram_plus1 {
+    width: 110px;
+    margin: 15px;
+    height: 110px;
+    background: #A66DFF 0% 0% no-repeat padding-box;
+    box-shadow: 0px 3px 6px #00000029;
+    opacity: 1;
+}
+
+.fram_bgHover {
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.fram_bgHover:hover {
+    background: #EDEEF0 0% 0% no-repeat padding-box;
+    cursor: pointer;
+}
+#fram_bgHover{
+    background: #EDEEF0 0% 0% no-repeat padding-box;
+    cursor: pointer;
+  
+}
+
+
+
+.fram_color1 {
+    color: #3598F4;
+}
+
+.fram_color2 {
+    color: #44D7B6;
+}
+
+.fram_color3 {
+    color: #6DD400;
+}
+
+.fram_color4 {
+    color: #B620E0;
+}
+
+.fram_color5 {
+    color: #FF808B;
+}
+
+.fram_color6 {
+    color: #F7B500;
+}
+
+.fram_color7 {
+    color: #6236FF;
+}
+.mApp span{
+    font-size: 3rem;
+}
+#fram_moreApp .btn {
+    color: #3A405E;
+}
+#fram_moreApp{
+    background-color: white;
+    position: absolute;
+    box-shadow: 0px 1px 6px #00000029;
+}
+#digitalCardApp,#digitalC{
+    color: rgb(68, 215, 182)!important;
+}
+#vloggerApp,#hiii{
+    color: rgb(98, 54, 255)!important;
+}

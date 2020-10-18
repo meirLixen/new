@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>landingPage Details</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#fff">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="description" content="Page description"><!-- Twitter Card data-->
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@publisher_handle">
+  <meta name="twitter:title" content="Page Title">
+  <meta name="twitter:description" content="Page description less than 200 characters">
+  <meta name="twitter:creator" content="@author_handle">
+  <meta name="twitter:image" content="http://www.example.com/image.jpg"><!-- Open Graph data-->
+  <meta property="og:title" content="Title Here">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="http://www.example.com/">
+  <meta property="og:image" content="http://example.com/image.jpg">
+  <meta property="og:description" content="Description Here">
+  <meta property="og:site_name" content="Site Name, i.e. Moz">
+  <meta property="fb:admins" content="Facebook numeric ID">
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" media="all" href="../../../assets/css/app.css"><!-- favicon-->
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../assets/img/favicon-16x16.png">
+  <link rel="manifest" href="../../../assets/img/site.webmanifest">
+  <link rel="mask-icon" href="../../../assets/img/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <script text="text/javascript">
+    let uid,landingPageName;
+    document.addEventListener("DOMContentLoaded", function () {
+    const url_string = window.location.href;
+    const url = new URL(url_string);
+    const pathNames= url.pathname.split('/')
+    landingPageName=pathNames[pathNames.length-1];
+    uid=pathNames[pathNames.length-2];
+    console.log(uid,landingPageName);
+
+    getUserData();
+
+    });
+    const getUserData = () => {
+      // const data = {action: 'forLandingPageInit', userID: userID, sessionID: sessionID};
+      $.ajax({
+        url: `https://api.leader.codes/landingPage/${uid}/${landingPageName}`,
+        type: 'GET',
+        withCradentials: true,
+        dataType: 'json',
+        contentType: "application/json",
+        success: function (data) {
+          console.log("success", data);
+          loadData(data)
+        }
+      })
+    }
+    const loadData = data => {
+      let header = "Welcome to my landing page";
+      let subHeader = "Leave your details and I'll get back to you";
+      let pathImg = data && data.img ? data.img : "bg-login-details.jpg";
+      $('.auth__title')[0].innerText = data && data.header ? data.header : header;
+      $('.auth__title')[1].innerText = data && data.header ? data.header : header;
+      $('._st')[0].innerText = data && data.subHeader ? data.subHeader : subHeader;
+      $('._st')[1].innerText = data && data.subHeader ? data.subHeader : subHeader;
+      $('.auth__bg')[0].style.backgroundImage = "url('../../../assets/uploads/" + pathImg + "')";
+    }
+  </script>
+</head>
+
+<body>
+  <!-- auth-->
+  <div class="auth">
+
+    <div class="auth__main" style="background-image: url(../../../assets/img/bg-login-mobile.jpg)">
+      <div class="auth__wrap">
+        <div class="auth__preview"><img class="auth__pic" src="../../../assets/img/logo-white.svg" width="48" alt="Logo">
+        </div>
+        <div class="auth__title title title_xl" contenteditable="true"></div>
+        <div class="auth__subtitle title title_sm _st" contenteditable="true"></div>
+      </div>
+    </div>
+    <!-- <form action="fileupload" method="post" enctype="multipart/form-data">
+    
+   </form> -->
+    <div class="auth__container">
+      <div class="auth__inner">
+        <div class="auth__head">
+          <div class="auth__title title title_xl" contenteditable="true"></div>
+          <div class="auth__text _st" contenteditable="true"></div>
+        </div>
+        <form class="auth__form" id="landingPageForm" method="post" enctype="multipart/form-data">
+          <div class="field auth__field">
+            <div class="field__label">Full Name</div>
+            <div class="field__wrap"><input class="field__input" type="text" name="name" placeholder="Start typing…">
+              <div class="field__icon"><i class="las la-user"></i></div>
+            </div>
+          </div>
+          <div class="field auth__field">
+            <div class="field__label">Email</div>
+            <div class="field__wrap"><input class="field__input" type="email" name="email" placeholder="Start typing…">
+              <div class="field__icon"><i class="las la-at"></i></div>
+            </div>
+          </div>
+          <div class="field auth__field">
+            <div class="field__label">Phone</div>
+            <div class="field__wrap"><input class="field__input" type="text" name="phone" placeholder="Start typing…">
+              <div class="field__icon"><i class="las la-phone"></i></div>
+            </div>
+          </div>
+          <div class="field auth__field">
+            <div class="field__label" style="margin-bottom:6px">Message</div>
+            <div class="field__wrap"><textarea class="field__input" type="text" name="message"
+                placeholder="Start typing…"></textarea>
+              <div class="field__icon"><i class="lar la-comment"></i></div>
+            </div>
+          </div>
+          <div class="field auth__field">
+            <div class="field__label" style="margin-bottom:6px">change Img</div>
+            <div class="field__wrap"> <input type="file" name="filetoupload"><br></textarea>
+            </div>
+          </div>
+          <div class="auth__btns"><button id="_s_btn" class="btn auth__btn">Submit</button><button id="save_btn"
+              class="btn auth__btn">Save</button></div>
+        </form>
+      </div>
+    </div>
+    <div class="auth__bg"></div>
+  </div><!-- scripts-->
+  <script src="../../../assets/js/lib/jquery.min.js "></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js "></script>‏
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script src="../../../assets/js/lib/datepicker.min.js"></script>
+  <script src="../../../assets/js/lib/datepicker.en.js"></script>
+  <script src="../../../assets/js/lib/select2.min.js"></script>
+  <script src="../../../assets/js/lib/wNumb.min.js"></script>
+  <script src="../../../assets/js/lib/nouislider.min.js"></script>
+  <script src="../../../assets/js/lib/apexcharts.min.js"></script>
+  <script src="../../../assets/js/charts.js"></script>
+  <script src="../../../assets/js/app.js"></script>
+  <script>
+    //EVENT LISTENERS
+    document.addEventListener('click', function (e) {
+      switch (e.target.id) {
+        case 'save_btn': {
+          const blob = $('input[type=file]')[0].files[0];
+          e.preventDefault();
+          const landingPageForm = $("#landingPageForm");
+          const fd = new FormData(landingPageForm);
+          const url = `https://api.leader.codes/landingPage/${uid}/${landingPageName}`;
+         fd.append("image", blob,blob?blob.name:blob);
+         fd.append("header",  $(".auth__title")[0].innerText);
+         fd.append("subHeader",  $("._st")[0].innerText);
+          const settings = {
+            "url": url,
+            "method": "POST",
+            "processData": false,
+            "mimeType": "multipart/form-data",
+            "contentType": false,
+            "data": fd,
+            "async": false,
+          };
+
+          $.ajax(settings).done(function (response) {
+            console.log(response);
+            window.location.href=window.location.href;
+          });
+
+        }
+      }
+    });
+    $(".auth__title").bind('blur', function (event) {
+      $(".auth__title")[0].innerText = event.target.textContent
+      $(".auth__title")[1].innerText = event.target.textContent
+    });
+    $("._st").bind('blur', function (event) {
+      $("._st")[0].innerText = event.target.textContent;
+      $("._st")[1].innerText = event.target.textContent;
+    });
+  </script>
+</body>
+
+</html>
