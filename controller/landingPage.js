@@ -22,6 +22,7 @@ duplicateLandingPage = async (req, res) => {
     json: LandingPageDuplicate.json,
   });
   newLandingPage.user = currentUser._id;
+  
 
   await newLandingPage.save();
   currentUser.LandingPage.push(newLandingPage);
@@ -37,7 +38,6 @@ getUidByUserName = async (req, res) => {
     console.log("uid " + user.uid)
   res.json({ "uid": user.uid })
 }
-
 
 
 removeLandingPage = async (req, res) => {
@@ -143,6 +143,7 @@ createLandingPage = async (req, res) => {
     }
   }
 };
+debugger 
 saveData = (customUser, currentUser) => {
   return new Promise(async (resolve, reject) => {
     const landingPage = new LandingPage(customUser);

@@ -1,20 +1,18 @@
 const express = require("express");
 const router = express.Router();
-
-const landingPageController = require("../controller/landingPage.js");
-router.get('/getUser/:userName', getUidByUserName)
-router.post("/:uId/submit", landingPageController.submit);
-router.put("/updateViewers", landingPageController.updateViewers);
-router.get("/:uId/getEmail", landingPageController.getUserEmail);
-router.get("/:uId/:name", landingPageController.getLandingPageDetails);
-router.post("/:uId/:name", landingPageController.updateLandingPageDetails);
-router.delete("/removeLandingPage/:uId/:LandingPageId", landingPageController.removeLandingPage);
-router.post("/:uId", landingPageController.createLandingPage);
+const path=require('path')
 
 
-// router.post("/duplicateLandingPage/:uId/:landingPageId",landingPageController.duplicateLandingPage);
-// router.post("/upload/file/yyyy", landingPageController.uploadedFile);
+const funnelController = require("../controller/funnel");
 
-router.get("/:uId", landingPageController.getLandingPages);
+router.post("/updateFunnel/:uId/:funnelId", funnelController.updateFunnel);
+router.delete("/removeFunnel/:funnelId", funnelController.removeFunnel);
+router.post('/uploadFile/:uId/:userName',funnelController.uploadFile)
+router.post('/:uId',funnelController.creatFunnel);
+router.get("/:uId", funnelController.getFunnelsbyUser);
+router.get('/getUser/:userName', getUidByUserName);
+router.get('/:uId/:name',funnelController.getFunnelById);
+
+
 
 module.exports = router;

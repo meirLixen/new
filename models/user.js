@@ -22,7 +22,7 @@ const userSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Card'
     }],
-    events: [{
+    events: [{  
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Event'
     }],
@@ -35,6 +35,10 @@ const userSchema = mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Site'
     }],
+    funnel:[{
+        type:mongoose.Schema.Types.ObjectId,
+        ref:'Funnel'
+    }]
 })
 
 module.exports = mongoose.model('User', userSchema)
